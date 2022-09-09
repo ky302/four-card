@@ -1,0 +1,157 @@
+:root {
+  /* primary */
+  --clr-blue: hsl(228, 45%, 44%);
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+  --ff-primary: "Poppins", sans-serif;
+
+  /* neutral */
+  --clr-very-dark-blue: hsl(234, 12%, 34%);
+  --clr-grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --body-font: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  font-family: var(--ff-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-header {
+  text-align: center;
+  max-width: 420px;
+  padding: 10px;
+}
+
+.feature-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--clr-very-dark-blue);
+}
+h1 > span {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 15px;
+  color: var(--clr-very-dark-blue);
+}
+
+h5 {
+  color: var(--clr-grayish-blue);
+  font-weight: 200;
+  line-height: 24px;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 11px;
+  padding: 10px 0;
+  color: var(--clr-grayish-blue);
+}
+
+.card-one {
+  grid-area: card1;
+  box-shadow: 0px -3px 0px 0px var(--clr-cyan);
+  border-radius: 2px;
+  margin: 10px;
+}
+.card-two {
+  box-shadow: 0px -3px 0px 0px var(--clr-red);
+  border-radius: 2px;
+  margin: 50px 30px;
+}
+.card-three {
+  box-shadow: 0px -3px 0px 0px var(--clr-orange);
+  border-radius: 2px;
+  margin: 50px 30px;
+}
+.card-four {
+  grid-area: card4;
+  box-shadow: 0px -3px 0px 0px var(--clr-blue);
+  border-radius: 2px;
+  margin: 10px;
+}
+
+.grid-card-center {
+  grid-area: card23;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-areas: "card1 card1 card1 card1 card23 card23 card23 card23 card4 card4 card4 card4";
+  align-items: center;
+  justify-content: center;
+}
+
+.info-card {
+  padding: 20px;
+  box-shadow: 0px 10px 10px rgba(173, 194, 206, 0.5);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px 0;
+}
+
+.icon img {
+  width: 50px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .feature-header {
+    padding: 30px;
+  }
+
+  .feature-cards {
+    display: grid;
+    grid-template-areas:
+      "card1 card1 card1 card1"
+      "card23 card23 card23 card23"
+      "card4 card4 card4 card4";
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0px;
+  }
+  .card-one {
+    margin: 0 4px;
+  }
+  .card-two {
+    margin: 30px 4px;
+  }
+  .card-three {
+    margin: 30px 4px;
+  }
+  .card-four {
+    margin: 0 4px;
+  }
+}
